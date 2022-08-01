@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debug cli",
+      "console": "integratedTerminal",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "skipFiles": ["<node_internals>/**"],
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "program": "${workspaceFolder}/bin/mycli.ts",
+      "args": ["add", "1", "1"]
+    }
+  ]
+}
